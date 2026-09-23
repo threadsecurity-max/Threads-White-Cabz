@@ -9,10 +9,10 @@
     "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
     "dev:web": "npm --prefix apps/web run dev",
     "dev:api": "npm --prefix apps/api run dev",
-    "build": "npm install --prefix apps/web && npm --prefix apps/web run build && npm install --prefix apps/api",
+    "build": "npm install --include=dev --prefix apps/web && npm --prefix apps/web run build && npm install --prefix apps/api",
     "start": "npm --prefix apps/api start",
     "start:api": "npm --prefix apps/api start",
-    "render:build": "npm install --prefix apps/web && npm --prefix apps/web run build && npm install --prefix apps/api",
+    "render:build": "npm install --include=dev --prefix apps/web && npm --prefix apps/web run build && npm install --prefix apps/api",
     "render:start": "npm --prefix apps/api start"
   },
   "devDependencies": {

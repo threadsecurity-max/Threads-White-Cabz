@@ -1,0 +1,72 @@
+export const FLEET_DATA = [
+  {
+    id: 'FL001',
+    category: 'Sedan',
+    title: 'Maruti Dzire / Sedan',
+    subtitle: 'Comfortable everyday and outstation travel',
+    description: 'Perfect for solo professionals, couples, and small families looking for a quiet, economical, and comfortable highway ride.',
+    passengers: '4 Passengers',
+    luggage: '2-3 Bags',
+    ac: true,
+    driverIncluded: true,
+    features: ['Climate Controlled AC', 'Comfort Legroom', 'Sanitized Interiors', 'FASTag Enabled', 'Mobile Charger'],
+    image: '/images/Dzire.jpg',
+    tag: 'Popular for Intercity'
+  },
+  {
+    id: 'FL002',
+    category: 'SUV',
+    title: 'Maruti Ertiga / 7-Seater',
+    subtitle: 'Extra space for families, hill stations, and luggage',
+    description: 'High ground clearance, ample luggage capacity, and commanding highway view make this the top choice for family trips and mountain vacations.',
+    passengers: '6-7 Passengers',
+    luggage: '4-5 Bags',
+    ac: true,
+    driverIncluded: true,
+    features: ['Dual Zone AC Vents', 'Generous Boot Space', 'Hill Terrain Stability', 'Ergonomic Seating', 'Roof Carrier Support'],
+    image: '/images/Ertiga.jpg',
+    tag: 'Best for Outstation'
+  },
+  {
+    id: 'FL003',
+    category: 'Premium Sedan',
+    title: 'Executive Premium Sedan',
+    subtitle: 'Executive and corporate travel with subtle luxury',
+    description: 'Sophisticated road presence, whisper-quiet cabin, and plush upholstery suited for VIP corporate delegates and premium airport arrivals.',
+    passengers: '4 Passengers',
+    luggage: '3 Bags',
+    ac: true,
+    driverIncluded: true,
+    features: ['Plush Leather Seating', 'Acoustic Glass Isolation', 'Bottled Mineral Water', 'Senior Chauffeur', 'High Speed USB-C Ports'],
+    image: '/images/Sedan.jpg',
+    tag: 'Corporate Preferred'
+  },
+  {
+    id: 'FL004',
+    category: 'Luxury SUV',
+    title: 'Kia Carens / Luxury MPV',
+    subtitle: 'Supreme comfort for family tours and airport runs',
+    description: 'Supreme luxury, elevated road poise, captain seating, and elite comfort for VIP delegates, grand celebrations, and high-profile road travel.',
+    passengers: '6-7 Passengers',
+    luggage: '4 Bags',
+    ac: true,
+    driverIncluded: true,
+    features: ['Captain Seat Comfort', 'White-Glove Chauffeur', 'Multi-Zone Climate Control', 'Ambient Lighting'],
+    image: '/images/Carens.jpeg',
+    tag: 'Executive Choice'
+  },
+  {
+    id: 'FL005',
+    category: 'Wedding Cars',
+    title: 'Flagship Luxury & Wedding SUV',
+    subtitle: 'Luxury vehicles for weddings, Baraat, and celebrations',
+    description: 'Make a royal statement on your special day. Immaculate luxury cars with bespoke decoration coordination and suited chauffeurs.',
+    passengers: '6 Passengers',
+    luggage: '4 Bags',
+    ac: true,
+    driverIncluded: true,
+    features: ['Pristine Luxury Finish', 'Decoration Coordination', 'Suited Chauffeur', 'Red Carpet Arrival Assistance'],
+    image: '/images/SUVs.jpg',
+    tag: 'Wedding Special'
+  }
+];

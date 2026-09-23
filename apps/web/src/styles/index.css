@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-gold: 184 147 68;
+    --color-bg: 250 248 245;
+    --color-surface: 255 255 255;
+    --color-text: 15 23 42;
+    --color-border: 234 227 214;
+    
+    /* Fluid Design Tokens */
+    --container-max: 1440px;
+    --space-xs: clamp(0.35rem, 0.4vw, 0.55rem);
+    --space-sm: clamp(0.65rem, 0.8vw, 0.95rem);
+    --space-md: clamp(1rem, 1.4vw, 1.4rem);
+    --space-lg: clamp(1.8rem, 3.5vw, 3.5rem);
+    --space-xl: clamp(3.5rem, 6vw, 6.5rem);
+    --radius-card: clamp(1rem, 1.5vw, 1.75rem);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-[#FAF8F5] text-slate-800 antialiased font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    min-height: 100dvh;
+    overflow-x: hidden;
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-slate-900;
+  }
+}
+
+/* Universal Fluid Container */
+.fluid-container {
+  width: min(100% - clamp(1.5rem, 4vw, 4rem), 1440px);
+  margin-inline: auto;
+}
+
+/* Light Theme Glass & Card Systems */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 227, 214, 0.9);
+  box-shadow: 0 10px 30px -5px rgba(30, 41, 59, 0.04), 0 2px 8px -2px rgba(184, 147, 68, 0.05);
+}
+
+.glass-panel-gold {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FDFBF7 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 147, 68, 0.28);
+  box-shadow: 0 15px 35px -5px rgba(184, 147, 68, 0.09), 0 0 0 1px rgba(184, 147, 68, 0.15);
+}
+
+.glass-dropdown {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(234, 227, 214, 0.95);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #9E7B2D 0%, #B89344 50%, #7E6020 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtle-champagne-bg {
+  background: linear-gradient(180deg, #FAF8F5 0%, #F5EFEB 100%);
+}
+
+/* Sleek Minimal Grid Background Patterns */
+.bg-grid-luxury {
+  background-image: 
+    linear-gradient(to right, rgba(184, 147, 68, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(184, 147, 68, 0.045) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.bg-grid-fine {
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-radial-mask {
+  mask-image: radial-gradient(circle at center, black 60%, transparent 95%);
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 95%);
+}
+
+/* Sleek Minimal Typography Watermark & Ribbon */
+.text-watermark-outline {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  -webkit-text-stroke: 1px rgba(184, 147, 68, 0.12);
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
+
+.text-watermark-subtle {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  color: rgba(184, 147, 68, 0.05);
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 38s linear infinite;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+/* Touch Targets & Accessibility */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Custom Scrollbar for Light Theme */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9CEBE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B89344;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

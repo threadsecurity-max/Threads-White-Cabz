@@ -1,0 +1,38 @@
+services:
+  # WhiteCabz Full-Stack Web Service (Backend API + Client Static Hosting)
+  - type: web
+    name: whitecabz-platform
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run render:build
+    startCommand: npm run render:start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: EMAIL_FROM
+        value: WhiteCabz <onboarding@resend.dev>
+      - key: ADMIN_EMAIL
+        value: info@whitecabz.com
+      - key: ADMIN_NOTIFICATION_NUMBER
+        value: "+919478613001"
+      - key: WHATSAPP_PHONE
+        value: "+919478613001"
+      - key: RESEND_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: GOOGLE_SHEETS_ID
+        sync: false
+      - key: GOOGLE_SERVICE_ACCOUNT_EMAIL
+        sync: false
+      - key: GOOGLE_PRIVATE_KEY
+        sync: false

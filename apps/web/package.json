@@ -21,6 +21,7 @@
     "react-router-dom": "^7.18.4",
     "tailwind-merge": "^2.5.2",
     "three": "^0.168.0",
+    "whitecabz-platform": "file:../..",
     "zod": "^3.23.8"
   },
   "devDependencies": {

@@ -2,7 +2,7 @@ services:
   # WhiteCabz Full-Stack Web Service (Backend API + Client Static Hosting)
   - type: web
     name: threads-white-cabz
-    env: node
+    runtime: node
     plan: free
     region: singapore
     buildCommand: npm install && npm run render:build

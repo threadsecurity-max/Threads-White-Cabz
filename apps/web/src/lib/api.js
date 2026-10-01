@@ -3,7 +3,7 @@ import { SERVICES_DATA } from '../data/servicesData';
 import { FLEET_DATA } from '../data/fleetData';
 import { getWhatsAppUrl } from './whatsapp';
 
-const API_BASE_URL = '/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api/v1';
 
 export async function createBookingRequest(payload) {
   try {

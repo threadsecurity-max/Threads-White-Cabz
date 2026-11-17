@@ -12,9 +12,9 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-2.5">
               <img
-                src="/images/Logo (2).png"
-                alt="WhiteCabz Premium Mobility"
-                className="h-14 sm:h-16 md:h-20 w-auto object-contain drop-shadow-xs"
+                src="/images/WhiteCabz.jpeg"
+                alt="WhiteCabz Tour & Travels"
+                className="h-12 sm:h-14 md:h-16 w-auto object-contain rounded-lg shadow-xs hover:opacity-95 transition-opacity"
               />
             </Link>
 

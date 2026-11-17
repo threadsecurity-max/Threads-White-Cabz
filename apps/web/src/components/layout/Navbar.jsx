@@ -59,12 +59,12 @@ export function Navbar({ onOpenBooking }) {
         }`}
       >
         <div className="fluid-container flex items-center justify-between">
-          {/* Logo with Logo (2).png */}
+          {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group py-0.5">
             <img
-              src="/images/Logo (2).png"
-              alt="WhiteCabz Premium Cabs"
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-xs"
+              src="/images/WhiteCabz.jpeg"
+              alt="WhiteCabz Tour & Travels"
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain rounded-lg shadow-xs group-hover:scale-105 transition-transform"
             />
           </Link>
 

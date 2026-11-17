@@ -13,10 +13,12 @@ node_modules/
 google-credentials.json
 *.serviceaccount.json
 
-# Build Outputs
+# Build Outputs & Deployment Bundles
 dist/
 build/
 .vite/
+*.zip
+deploy_hostinger.zip
 
 # Logs & Diagnostics
 logs/

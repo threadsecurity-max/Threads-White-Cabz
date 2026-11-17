@@ -25,4 +25,4 @@ Allow: /*.svg$
 Allow: /*.webp$
 
 # Sitemap location
-Sitemap: https://threads-white-cabz-6hfv.onrender.com/sitemap.xml
+Sitemap: https://whitecabz.com/sitemap.xml
